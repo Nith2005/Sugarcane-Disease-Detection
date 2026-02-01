@@ -1,0 +1,120 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Flask
+instance/
+.webassets-cache
+
+# Uploaded Images & Results (temporary files)
+interface/uploads/*
+!interface/uploads/.gitkeep
+interface/results/*
+!interface/results/.gitkeep
+
+# Training Outputs
+training/runs/
+training/weights/
+training/*.pt
+training/*.pth
+
+# Inference Outputs
+inference/output/*
+!inference/output/.gitkeep
+inference/input/*
+!inference/input/.gitkeep
+
+# Dataset (if large)
+data/images/
+data/labels/
+data/train/
+data/val/
+data/test/
+
+# Model checkpoints (optional - uncomment if models are too large)
+# models/*.pt
+# models/*.pth
+# models/*.onnx
+
+# Logs
+*.log
+logs/
+*.out
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+
+# Large media files (if needed)
+*.mp4
+*.avi
+*.mov
