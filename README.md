@@ -305,7 +305,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Authors
 
-[Your Name/Team]
+Developed by [Nith2005](https://github.com/Nith2005)
 
 ## 🙏 Acknowledgments
 
@@ -316,8 +316,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Contact
 
 For questions, issues, or collaboration:
-- **Email**: [your-email@example.com]
-- **GitHub Issues**: [Link to issues page]
+- **GitHub Issues**: [https://github.com/Nith2005/Sugarcane-Disease-Detection/issues](https://github.com/Nith2005/Sugarcane-Disease-Detection/issues)
+- **Pull Requests**: Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 - **Documentation**: See README files in each directory
 
 ## 📈 Roadmap
