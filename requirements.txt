@@ -1,0 +1,20 @@
+# Core ML Framework
+ultralytics>=8.0.0
+
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer Vision
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Web Framework
+Flask>=3.0.0
+Werkzeug>=3.0.0
+
+# Data Processing
+numpy>=1.24.0
+
+# Utilities
+pyyaml>=6.0

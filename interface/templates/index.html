@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugarcane Disease & Insect Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🌾</span>
+                    <h1>Sugarcane Disease Detection</h1>
+                </div>
+                <p class="tagline">AI-Powered Early Detection System</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Instructions -->
+            <section class="instructions">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Upload Image</h3>
+                        <p>Select a clear photo of sugarcane leaves</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Choose Model</h3>
+                        <p>Detection (fast) or Segmentation (precise)</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Analyze</h3>
+                        <p>Get instant results and recommendations</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-card">
+                    <h2>Upload Sugarcane Image</h2>
+                    
+                    <!-- File Upload Area -->
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <div class="upload-placeholder">
+                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <p class="upload-text">Click to upload or drag and drop</p>
+                            <p class="upload-subtext">PNG, JPG, JPEG up to 16MB</p>
+                        </div>
+                        <img id="previewImage" class="preview-image" style="display: none;">
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="modelType">Model Type</label>
+                            <select id="modelType" class="select-input">
+                                <option value="detection">Object Detection (Fast)</option>
+                                <option value="segmentation">Instance Segmentation (Precise)</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="confThreshold">
+                                Confidence Threshold: <span id="confValue">0.25</span>
+                            </label>
+                            <input type="range" id="confThreshold" min="0.1" max="0.9" step="0.05" value="0.25" class="slider">
+                            <div class="slider-labels">
+                                <span>More Detections</span>
+                                <span>More Confident</span>
+                            </div>
+                        </div>
+
+                        <button id="analyzeBtn" class="btn btn-primary" disabled>
+                            <span class="btn-text">Analyze Image</span>
+                            <span class="btn-loader" style="display: none;">
+                                <span class="spinner"></span>
+                                Analyzing...
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-grid">
+                    <!-- Result Image -->
+                    <div class="result-card">
+                        <h3>Annotated Image</h3>
+                        <div class="result-image-container">
+                            <img id="resultImage" class="result-image" alt="Analysis Result">
+                        </div>
+                    </div>
+
+                    <!-- Analysis Report -->
+                    <div class="result-card">
+                        <h3>Analysis Report</h3>
+                        <div id="analysisReport" class="analysis-report">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by YOLOv8 | Built with Flask</p>
+            <p class="footer-note">For best results, use clear, well-lit images of sugarcane leaves</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
